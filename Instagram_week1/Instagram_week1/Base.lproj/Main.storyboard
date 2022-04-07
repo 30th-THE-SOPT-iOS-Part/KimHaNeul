@@ -49,6 +49,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="로그인">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="LoginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="imS-H2-izV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="계정이 없으신가요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJA-xs-J84">
                                 <rect key="frame" x="100" y="582" width="131" height="21"/>
@@ -81,15 +84,19 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="dWN-yc-Hc3"/>
+                    <connections>
+                        <outlet property="passwordTF" destination="cYZ-BN-Jb0" id="YMU-Da-IQm"/>
+                        <outlet property="userIDTF" destination="RWB-kl-UXG" id="uzv-xc-FQT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="801" y="84"/>
         </scene>
-        <!--View Controller-->
+        <!--Join Setting Name View Controller-->
         <scene sceneID="UL0-si-VCB">
             <objects>
-                <viewController id="VIb-UM-a4H" sceneMemberID="viewController">
+                <viewController id="VIb-UM-a4H" customClass="JoinSettingNameViewController" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OKx-7F-LeZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -128,7 +135,7 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="3Li-3x-AeH" kind="show" id="ksO-L0-4fv"/>
+                                    <segue destination="3Li-3x-AeH" kind="show" identifier="settingPwVC" id="ksO-L0-4fv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,8 +143,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="o9U-iy-fpv">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icn_back_24.png" id="irL-kl-mw7"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icn_back_24.png" id="irL-kl-mw7">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="popViewAction:" destination="VIb-UM-a4H" id="5n4-Ht-VF8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userNameTF" destination="oYC-UP-QA7" id="9tc-8e-TKX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RW-5n-Uw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,34 +176,27 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Join Setting Password View Controller-->
         <scene sceneID="e5I-cH-EaC">
             <objects>
-                <viewController id="3Li-3x-AeH" sceneMemberID="viewController">
+                <viewController id="3Li-3x-AeH" customClass="JoinSettingPasswordViewController" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tY4-aW-G1E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="사용자 이름 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oa-GS-mu6">
-                                <rect key="frame" x="100" y="110" width="214" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호 만들기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oa-GS-mu6">
+                                <rect key="frame" x="100" y="110" width="182" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="새 계정에 사용할 사용자 이름을 선택하세요. 나중에 언제든지 변경할 수 있습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnq-Nw-Cie">
-                                <rect key="frame" x="47" y="153" width="320" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="사용자 이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSH-pZ-1Xc">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YSH-pZ-1Xc">
                                 <rect key="frame" x="20" y="259" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97933279419999997" green="0.97807776489999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="3Li-3x-AeH" id="WYD-Ma-GLF"/>
                                 </connections>
@@ -202,23 +210,41 @@
                                 <buttonConfiguration key="configuration" style="plain" title="로그인">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextBtnAction:" destination="3Li-3x-AeH" eventType="touchUpInside" id="bG2-k5-8BD"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="비밀번호를 저장할 수 있으므로 iCloud* 기기에서 로그인 정보를 입력하지 않아도 됩니다. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnq-Nw-Cie">
+                                <rect key="frame" x="29" y="153" width="356" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RTa-LS-Wl1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ns7-Kv-iJe">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="icn_back_24.png" id="CfM-sU-Ddc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="icn_back_24.png" id="CfM-sU-Ddc">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="popViewAction:" destination="3Li-3x-AeH" id="Aea-wM-ClY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTF" destination="YSH-pZ-1Xc" id="I8I-TF-Xcr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmA-NB-Hhe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2278" y="84"/>
+            <point key="canvasLocation" x="2275.36231884058" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Login Success View Controller-->
         <scene sceneID="g91-s1-Hjk">
             <objects>
-                <viewController id="j8Z-2g-wxA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginSuccessVC" id="j8Z-2g-wxA" customClass="LoginSuccessViewController" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LZV-Ug-rHd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -246,11 +272,17 @@
                                 <buttonConfiguration key="configuration" style="plain" title="완료하기">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToLoginAction:" destination="j8Z-2g-wxA" eventType="touchUpInside" id="WjL-l4-Qza"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gZ3-fx-xwc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="dJP-wd-FW1" id="yyx-fI-ImH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k8l-FC-faA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -260,6 +292,9 @@
     <resources>
         <image name="Instagram Black Logo.png" width="175" height="50"/>
         <image name="icn_back_24.png" width="24.5" height="24"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -24,6 +24,9 @@
 		084152A627FF053400ADA61F /* icn_back_24@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0841529E27FF053400ADA61F /* icn_back_24@3x.png */; };
 		084152A727FF053400ADA61F /* icn_back_24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0841529F27FF053400ADA61F /* icn_back_24@2x.png */; };
 		084152A827FF053400ADA61F /* password hidden eye icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 084152A027FF053400ADA61F /* password hidden eye icon@2x.png */; };
+		084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */; };
+		084152AC27FF193300ADA61F /* JoinSettingPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */; };
+		084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		0841529E27FF053400ADA61F /* icn_back_24@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_back_24@3x.png"; sourceTree = "<group>"; };
 		0841529F27FF053400ADA61F /* icn_back_24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_back_24@2x.png"; sourceTree = "<group>"; };
 		084152A027FF053400ADA61F /* password hidden eye icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password hidden eye icon@2x.png"; sourceTree = "<group>"; };
+		084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSettingNameViewController.swift; sourceTree = "<group>"; };
+		084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSettingPasswordViewController.swift; sourceTree = "<group>"; };
+		084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,9 @@
 				0841527D27FF034300ADA61F /* AppDelegate.swift */,
 				0841527F27FF034300ADA61F /* SceneDelegate.swift */,
 				0841528127FF034300ADA61F /* ViewController.swift */,
+				084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */,
+				084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */,
+				084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */,
 				0841528327FF034300ADA61F /* Main.storyboard */,
 				0841528627FF034500ADA61F /* Assets.xcassets */,
 				0841528827FF034500ADA61F /* LaunchScreen.storyboard */,
@@ -198,9 +207,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */,
 				0841528227FF034300ADA61F /* ViewController.swift in Sources */,
+				084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */,
 				0841527E27FF034300ADA61F /* AppDelegate.swift in Sources */,
 				0841528027FF034300ADA61F /* SceneDelegate.swift in Sources */,
+				084152AC27FF193300ADA61F /* JoinSettingPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
