@@ -26,6 +26,8 @@ class ViewController: UIViewController {
         userIDTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         passwordTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         
+        // 비밀번호 textfield secure text entry 기본 true로 설정
+        setPasswordTFSecureTrue()
         
     }
     
@@ -37,6 +39,30 @@ class ViewController: UIViewController {
         loginSuccessVC.userName = userIDTF.text
         loginSuccessVC.modalPresentationStyle = .fullScreen
         self.present(loginSuccessVC, animated: true, completion: nil)
+    }
+    
+    // 비밀번호 textfield secure text entry가 true일 때
+    func setPasswordTFSecureTrue() {
+        let secureTrueButton = UIButton(type: .custom)
+        let secureImage = UIImage(named: "password hidden eye icon.png")
+        secureTrueButton.setImage(secureImage, for: .normal)
+        secureTrueButton.addTarget(self, action: #selector(secureEntry), for: .touchUpInside)
+        secureTrueButton.sizeToFit()
+        
+        passwordTF.rightView = secureTrueButton
+        passwordTF.rightViewMode = .always
+    }
+    
+    // 비밀번호 textfield secure text entry가 false일 때
+    func setPasswordTFSecureFalse() {
+        let secureFalseButton = UIButton(type: .custom)
+        let notSecureImage = UIImage(named: "password shown eye icon.png")
+        secureFalseButton.setImage(notSecureImage, for: .normal)
+        secureFalseButton.addTarget(self, action: #selector(secureEntry), for: .touchUpInside)
+        secureFalseButton.sizeToFit()
+        
+        passwordTF.rightView = secureFalseButton
+        passwordTF.rightViewMode = .always
     }
 }
 extension ViewController: UITextFieldDelegate {
@@ -62,6 +88,18 @@ extension ViewController: UITextFieldDelegate {
         }
     }
     
-    
+    // 비밀번호 textfield 눈 아이콘 클릭시 secure text entry 변경
+    @objc func secureEntry(_ sender: Any?) {
+        if passwordTF.isSecureTextEntry == true {
+            passwordTF.isSecureTextEntry = false
+            
+            setPasswordTFSecureFalse()
+        }
+        else {
+            passwordTF.isSecureTextEntry = true
+            
+            setPasswordTFSecureTrue()
+        }
+    }
 }
 
