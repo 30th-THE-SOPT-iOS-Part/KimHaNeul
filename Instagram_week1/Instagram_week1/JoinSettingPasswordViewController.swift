@@ -10,10 +10,19 @@ import UIKit
 class JoinSettingPasswordViewController: UIViewController {
 
     @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var nextBtn: UIButton!
     var userName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 버튼 속성 초기화
+        nextBtn.isEnabled = false
+        nextBtn.backgroundColor = UIColor(named: "blue_165")
+        nextBtn.setTitleColor(.white, for: .normal)
+        
+        // textfield 편집 추적
+        passwordTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
     // 클릭시 loginSuccessVC 띄움
@@ -41,5 +50,20 @@ extension JoinSettingPasswordViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    // textfield 비어있지 않으면 다음 버튼 활성화
+    @objc func textFieldDidChange(_ sender: Any?) {
+        if let passwordText = passwordTF.text {
+            if !passwordText.isEmpty {
+                nextBtn.isEnabled = true
+                nextBtn.backgroundColor = UIColor(named: "blue_83")
+                nextBtn.setTitleColor(.white, for: .normal)
+            }
+            else {
+                nextBtn.isEnabled = false
+                nextBtn.backgroundColor = UIColor(named: "blue_165")
+                nextBtn.setTitleColor(.white, for: .normal)
+            }
+        }
     }
 }
