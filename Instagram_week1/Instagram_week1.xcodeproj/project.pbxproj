@@ -33,6 +33,7 @@
 		0863BCE6280B25E000AFB2B9 /* ReelsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE5280B25E000AFB2B9 /* ReelsTab.storyboard */; };
 		0863BCE8280B263200AFB2B9 /* ShopTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */; };
 		0863BCEA280B265F00AFB2B9 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */; };
+		0863BCEE280B2E0000AFB2B9 /* TabBarViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863BCED280B2E0000AFB2B9 /* TabBarViewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		0863BCE5280B25E000AFB2B9 /* ReelsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsTab.storyboard; sourceTree = "<group>"; };
 		0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopTab.storyboard; sourceTree = "<group>"; };
 		0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
+		0863BCED280B2E0000AFB2B9 /* TabBarViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				0841529127FF043500ADA61F /* imageSource */,
 				0841529827FF048000ADA61F /* iconSource */,
 				0863BCDD280B225400AFB2B9 /* LoginVC */,
+				0863BCEC280B2DB900AFB2B9 /* TabBarVC */,
 				0863BCDE280B229600AFB2B9 /* JoinVC */,
 				0863BCDC280B223E00AFB2B9 /* storyboards */,
 				0841527D27FF034300ADA61F /* AppDelegate.swift */,
@@ -173,6 +176,14 @@
 				0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		0863BCEC280B2DB900AFB2B9 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				0863BCED280B2E0000AFB2B9 /* TabBarViewcontroller.swift */,
+			);
+			path = TabBarVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0863BCEE280B2E0000AFB2B9 /* TabBarViewcontroller.swift in Sources */,
 				084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */,
 				0841528227FF034300ADA61F /* ViewController.swift in Sources */,
 				084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */,

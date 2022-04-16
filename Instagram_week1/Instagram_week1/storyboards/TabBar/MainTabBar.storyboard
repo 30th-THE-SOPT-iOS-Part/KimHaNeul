@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar Viewcontroller-->
         <scene sceneID="K6L-iF-9jM">
             <objects>
-                <tabBarController id="zb3-ty-yEa" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarVC" id="zb3-ty-yEa" customClass="TabBarViewcontroller" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yJ5-Bo-kTl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -18,6 +18,7 @@
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <outlet property="mainTabBar" destination="yJ5-Bo-kTl" id="wEg-RV-ku5"/>
                         <segue destination="rSi-4Q-YSS" kind="relationship" relationship="viewControllers" id="f51-0s-ciX"/>
                         <segue destination="CLt-or-MLZ" kind="relationship" relationship="viewControllers" id="6rh-F1-V0c"/>
                         <segue destination="eBc-eI-slC" kind="relationship" relationship="viewControllers" id="mmz-WM-i3M"/>

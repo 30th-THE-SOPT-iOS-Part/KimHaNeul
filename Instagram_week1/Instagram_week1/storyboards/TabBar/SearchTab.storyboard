@@ -17,7 +17,7 @@
                         <viewLayoutGuide key="safeArea" id="LYg-KX-Q8h"/>
                         <color key="backgroundColor" red="0.99764198059999998" green="0.99800390009999995" blue="0.32919216159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icn_search" selectedImage="icn_search_selected" id="lAV-z1-SsW"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="icn_search" selectedImage="icn_search_selected" id="lAV-z1-SsW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWr-0K-qyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

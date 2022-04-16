@@ -17,7 +17,7 @@
                         <viewLayoutGuide key="safeArea" id="kqb-sV-TYb"/>
                         <color key="backgroundColor" red="0.41974240540000002" green="0.068185307089999994" blue="0.44316115979999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="icn_profile" selectedImage="icn_profile_selected" id="R6f-xm-MfW"/>
+                    <tabBarItem key="tabBarItem" tag="5" title="" image="icn_profile" selectedImage="icn_profile_selected" id="R6f-xm-MfW"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVK-Zo-wbw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
