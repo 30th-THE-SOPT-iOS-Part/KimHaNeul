@@ -17,19 +17,38 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUI()
+        setPasswordTF()
+    }
+    func setUI() {
         // 버튼 속성 초기화
         loginBtn.isEnabled = false
         loginBtn.backgroundColor = UIColor(named: "blue_165")
         loginBtn.setTitleColor(.white, for: .normal)
+        loginBtn.setTitleColor(.white, for: .disabled)
     
         // textfield 편집 추적
         userIDTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         passwordTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        
-        // 비밀번호 textfield secure text entry 기본 true로 설정
-        setPasswordTFSecureTrue()
-        
     }
+    // 비밀번호 textfield isSecureTextEntry 버튼 세팅
+    func setPasswordTF() {
+        let secureButton = UIButton(type: .custom)
+        secureButton.setImage(UIImage(named: "password hidden eye icon.png"), for: .normal)
+        secureButton.setImage(UIImage(named: "password shown eye icon.png"), for: .selected)
+        secureButton.addTarget(self, action: #selector(secureEntry), for: .touchUpInside)
+        secureButton.sizeToFit()
+        
+        passwordTF.rightView = secureButton
+        passwordTF.rightViewMode = .always
+    }
+    // 비밀번호 textfield의 secure버튼(눈 아이콘) 클릭됨에 따라 isSecureTextEntry 제어
+    @objc func secureEntry(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        passwordTF.isSecureTextEntry = !sender.isSelected
+    }
+
+    
     
     // 클릭시 loginSuccessVC 띄움
     @IBAction func LoginAction(_ sender: UIButton) {
@@ -41,29 +60,7 @@ class ViewController: UIViewController {
         self.present(loginSuccessVC, animated: true, completion: nil)
     }
     
-    // 비밀번호 textfield secure text entry가 true일 때
-    func setPasswordTFSecureTrue() {
-        let secureTrueButton = UIButton(type: .custom)
-        let secureImage = UIImage(named: "password hidden eye icon.png")
-        secureTrueButton.setImage(secureImage, for: .normal)
-        secureTrueButton.addTarget(self, action: #selector(secureEntry), for: .touchUpInside)
-        secureTrueButton.sizeToFit()
-        
-        passwordTF.rightView = secureTrueButton
-        passwordTF.rightViewMode = .always
-    }
     
-    // 비밀번호 textfield secure text entry가 false일 때
-    func setPasswordTFSecureFalse() {
-        let secureFalseButton = UIButton(type: .custom)
-        let notSecureImage = UIImage(named: "password shown eye icon.png")
-        secureFalseButton.setImage(notSecureImage, for: .normal)
-        secureFalseButton.addTarget(self, action: #selector(secureEntry), for: .touchUpInside)
-        secureFalseButton.sizeToFit()
-        
-        passwordTF.rightView = secureFalseButton
-        passwordTF.rightViewMode = .always
-    }
 }
 extension ViewController: UITextFieldDelegate {
     
@@ -78,28 +75,13 @@ extension ViewController: UITextFieldDelegate {
             if !userText.isEmpty && !passText.isEmpty {
                 loginBtn.isEnabled = true
                 loginBtn.backgroundColor = UIColor(named: "blue_83")
-                loginBtn.setTitleColor(.white, for: .normal)
             }
             else {
                 loginBtn.isEnabled = false
                 loginBtn.backgroundColor = UIColor(named: "blue_165")
-                loginBtn.setTitleColor(.white, for: .normal)
             }
         }
     }
     
-    // 비밀번호 textfield 눈 아이콘 클릭시 secure text entry 변경
-    @objc func secureEntry(_ sender: Any?) {
-        if passwordTF.isSecureTextEntry == true {
-            passwordTF.isSecureTextEntry = false
-            
-            setPasswordTFSecureFalse()
-        }
-        else {
-            passwordTF.isSecureTextEntry = true
-            
-            setPasswordTFSecureTrue()
-        }
-    }
 }
 

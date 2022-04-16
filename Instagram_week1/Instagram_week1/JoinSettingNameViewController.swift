@@ -15,14 +15,19 @@ class JoinSettingNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
+    }
+    
+    // 뷰 세팅
+    func setUI() {
         // 버튼 속성 초기화
         nextBtn.isEnabled = false
         nextBtn.backgroundColor = UIColor(named: "blue_165")
         nextBtn.setTitleColor(.white, for: .normal)
+        nextBtn.setTitleColor(.white, for: .disabled)
         
         // textfield 편집 추적
         userNameTF.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
-        
     }
     
     // 다음 뷰로 사용자 이름 넘겨줌
@@ -52,12 +57,10 @@ extension JoinSettingNameViewController: UITextFieldDelegate {
             if !userNameText.isEmpty {
                 nextBtn.isEnabled = true
                 nextBtn.backgroundColor = UIColor(named: "blue_83")
-                nextBtn.setTitleColor(.white, for: .normal)
             }
             else {
                 nextBtn.isEnabled = false
                 nextBtn.backgroundColor = UIColor(named: "blue_165")
-                nextBtn.setTitleColor(.white, for: .normal)
             }
         }
     }
