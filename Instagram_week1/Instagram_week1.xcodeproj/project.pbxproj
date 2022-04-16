@@ -27,6 +27,7 @@
 		084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */; };
 		084152AC27FF193300ADA61F /* JoinSettingPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */; };
 		084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */; };
+		0863BCDB280B202500AFB2B9 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSettingNameViewController.swift; sourceTree = "<group>"; };
 		084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSettingPasswordViewController.swift; sourceTree = "<group>"; };
 		084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
+		0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */,
 				084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */,
 				0841528327FF034300ADA61F /* Main.storyboard */,
+				0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */,
 				0841528627FF034500ADA61F /* Assets.xcassets */,
 				0841528827FF034500ADA61F /* LaunchScreen.storyboard */,
 				0841528B27FF034500ADA61F /* Info.plist */,
@@ -189,6 +192,7 @@
 				084152A127FF053400ADA61F /* password shown eye icon@2x.png in Resources */,
 				084152A427FF053400ADA61F /* password hidden eye icon.png in Resources */,
 				084152A827FF053400ADA61F /* password hidden eye icon@2x.png in Resources */,
+				0863BCDB280B202500AFB2B9 /* MainTabBar.storyboard in Resources */,
 				084152A227FF053400ADA61F /* password shown eye icon@3x.png in Resources */,
 				0841529727FF047000ADA61F /* Instagram Black Logo.png in Resources */,
 				0841529527FF047000ADA61F /* Instagram Black Logo@3x.png in Resources */,
