@@ -28,6 +28,11 @@
 		084152AC27FF193300ADA61F /* JoinSettingPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */; };
 		084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */; };
 		0863BCDB280B202500AFB2B9 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */; };
+		0863BCE2280B24DE00AFB2B9 /* HomeTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE1280B24DE00AFB2B9 /* HomeTab.storyboard */; };
+		0863BCE4280B255900AFB2B9 /* SearchTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE3280B255900AFB2B9 /* SearchTab.storyboard */; };
+		0863BCE6280B25E000AFB2B9 /* ReelsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE5280B25E000AFB2B9 /* ReelsTab.storyboard */; };
+		0863BCE8280B263200AFB2B9 /* ShopTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */; };
+		0863BCEA280B265F00AFB2B9 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +59,11 @@
 		084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinSettingPasswordViewController.swift; sourceTree = "<group>"; };
 		084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSuccessViewController.swift; sourceTree = "<group>"; };
 		0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		0863BCE1280B24DE00AFB2B9 /* HomeTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeTab.storyboard; sourceTree = "<group>"; };
+		0863BCE3280B255900AFB2B9 /* SearchTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchTab.storyboard; sourceTree = "<group>"; };
+		0863BCE5280B25E000AFB2B9 /* ReelsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsTab.storyboard; sourceTree = "<group>"; };
+		0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopTab.storyboard; sourceTree = "<group>"; };
+		0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,16 +96,13 @@
 		0841527C27FF034300ADA61F /* Instagram_week1 */ = {
 			isa = PBXGroup;
 			children = (
-				0841529827FF048000ADA61F /* iconSource */,
 				0841529127FF043500ADA61F /* imageSource */,
+				0841529827FF048000ADA61F /* iconSource */,
+				0863BCDD280B225400AFB2B9 /* LoginVC */,
+				0863BCDE280B229600AFB2B9 /* JoinVC */,
+				0863BCDC280B223E00AFB2B9 /* storyboards */,
 				0841527D27FF034300ADA61F /* AppDelegate.swift */,
 				0841527F27FF034300ADA61F /* SceneDelegate.swift */,
-				0841528127FF034300ADA61F /* ViewController.swift */,
-				084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */,
-				084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */,
-				084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */,
-				0841528327FF034300ADA61F /* Main.storyboard */,
-				0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */,
 				0841528627FF034500ADA61F /* Assets.xcassets */,
 				0841528827FF034500ADA61F /* LaunchScreen.storyboard */,
 				0841528B27FF034500ADA61F /* Info.plist */,
@@ -126,6 +133,46 @@
 				0841529A27FF053400ADA61F /* password shown eye icon@3x.png */,
 			);
 			path = iconSource;
+			sourceTree = "<group>";
+		};
+		0863BCDC280B223E00AFB2B9 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0841528327FF034300ADA61F /* Main.storyboard */,
+				0863BCEB280B277500AFB2B9 /* TabBar */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		0863BCDD280B225400AFB2B9 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				0841528127FF034300ADA61F /* ViewController.swift */,
+				084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		0863BCDE280B229600AFB2B9 /* JoinVC */ = {
+			isa = PBXGroup;
+			children = (
+				084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */,
+				084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */,
+			);
+			path = JoinVC;
+			sourceTree = "<group>";
+		};
+		0863BCEB280B277500AFB2B9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0863BCDA280B202500AFB2B9 /* MainTabBar.storyboard */,
+				0863BCE1280B24DE00AFB2B9 /* HomeTab.storyboard */,
+				0863BCE3280B255900AFB2B9 /* SearchTab.storyboard */,
+				0863BCE5280B25E000AFB2B9 /* ReelsTab.storyboard */,
+				0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */,
+				0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +241,16 @@
 				084152A827FF053400ADA61F /* password hidden eye icon@2x.png in Resources */,
 				0863BCDB280B202500AFB2B9 /* MainTabBar.storyboard in Resources */,
 				084152A227FF053400ADA61F /* password shown eye icon@3x.png in Resources */,
+				0863BCE6280B25E000AFB2B9 /* ReelsTab.storyboard in Resources */,
+				0863BCE8280B263200AFB2B9 /* ShopTab.storyboard in Resources */,
 				0841529727FF047000ADA61F /* Instagram Black Logo.png in Resources */,
+				0863BCE2280B24DE00AFB2B9 /* HomeTab.storyboard in Resources */,
 				0841529527FF047000ADA61F /* Instagram Black Logo@3x.png in Resources */,
 				0841528727FF034500ADA61F /* Assets.xcassets in Resources */,
+				0863BCE4280B255900AFB2B9 /* SearchTab.storyboard in Resources */,
 				0841529627FF047000ADA61F /* Instagram Black Logo@2x.png in Resources */,
 				084152A327FF053400ADA61F /* icn_back_24.png in Resources */,
+				0863BCEA280B265F00AFB2B9 /* ProfileTab.storyboard in Resources */,
 				0841528527FF034300ADA61F /* Main.storyboard in Resources */,
 				084152A627FF053400ADA61F /* icn_back_24@3x.png in Resources */,
 			);
