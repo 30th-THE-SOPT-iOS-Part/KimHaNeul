@@ -306,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="v4F-fr-jdM">
-                                <rect key="frame" x="54" y="354" width="306" height="160"/>
+                                <rect key="frame" x="54" y="357" width="306" height="160"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOO님,  Instagram에 오신 것을 환영합니다" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJP-wd-FW1">
                                         <rect key="frame" x="0.0" y="0.0" width="226" height="57.5"/>
@@ -342,10 +342,11 @@
                                     <constraint firstAttribute="width" constant="306" id="5dw-Sc-cMa"/>
                                     <constraint firstAttribute="trailing" secondItem="62I-lJ-8rE" secondAttribute="trailing" id="Pa4-pg-K83"/>
                                     <constraint firstItem="62I-lJ-8rE" firstAttribute="leading" secondItem="v4F-fr-jdM" secondAttribute="leading" id="VwI-9H-fvB"/>
+                                    <constraint firstAttribute="height" constant="160" id="yKC-tD-rDs"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqf-yn-7Yf">
-                                <rect key="frame" x="136.5" y="532" width="141" height="29"/>
+                                <rect key="frame" x="136.5" y="535" width="141" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="다른 계정으로 로그인하기"/>
@@ -357,9 +358,9 @@
                         <viewLayoutGuide key="safeArea" id="gZ3-fx-xwc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="v4F-fr-jdM" firstAttribute="centerY" secondItem="gZ3-fx-xwc" secondAttribute="centerY" constant="-16" id="3VK-Ho-4Ny"/>
                             <constraint firstItem="v4F-fr-jdM" firstAttribute="centerX" secondItem="gZ3-fx-xwc" secondAttribute="centerX" id="VhQ-kK-KSO"/>
                             <constraint firstItem="Dqf-yn-7Yf" firstAttribute="centerX" secondItem="gZ3-fx-xwc" secondAttribute="centerX" id="Vz8-ka-TNA"/>
-                            <constraint firstItem="v4F-fr-jdM" firstAttribute="top" secondItem="gZ3-fx-xwc" secondAttribute="top" constant="310" id="ZS2-oI-Ot8"/>
                             <constraint firstItem="Dqf-yn-7Yf" firstAttribute="top" secondItem="62I-lJ-8rE" secondAttribute="bottom" constant="18" id="rWf-Du-kN3"/>
                         </constraints>
                     </view>

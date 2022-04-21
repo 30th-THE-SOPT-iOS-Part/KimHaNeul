@@ -22,6 +22,7 @@ class LoginSuccessViewController: UIViewController {
     @IBAction func backToLoginAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
         let mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarVC")
+        mainTabBarVC.modalPresentationStyle = .fullScreen
         self.present(mainTabBarVC, animated: true, completion: nil)
     }
     @IBAction func loginAnotherAccountAction(_ sender: UIButton) {
