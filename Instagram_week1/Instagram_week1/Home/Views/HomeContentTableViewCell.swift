@@ -24,6 +24,7 @@ class HomeContentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         postImageView.contentMode = .scaleAspectFill
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

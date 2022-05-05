@@ -37,6 +37,9 @@
 		0863BCE8280B263200AFB2B9 /* ShopTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */; };
 		0863BCEA280B265F00AFB2B9 /* ProfileTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */; };
 		0863BCEE280B2E0000AFB2B9 /* TabBarViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863BCED280B2E0000AFB2B9 /* TabBarViewcontroller.swift */; };
+		0871411A2823ACAC0007E117 /* HomeStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087141182823ACAC0007E117 /* HomeStoryCollectionViewCell.swift */; };
+		0871411B2823ACAC0007E117 /* HomeStoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087141192823ACAC0007E117 /* HomeStoryCollectionViewCell.xib */; };
+		0871411D2823C1040007E117 /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0871411C2823C1040007E117 /* StoryModel.swift */; };
 		088CBBD028239874002DAF06 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088CBBCF28239874002DAF06 /* PostModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		0863BCE7280B263200AFB2B9 /* ShopTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopTab.storyboard; sourceTree = "<group>"; };
 		0863BCE9280B265F00AFB2B9 /* ProfileTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileTab.storyboard; sourceTree = "<group>"; };
 		0863BCED280B2E0000AFB2B9 /* TabBarViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewcontroller.swift; sourceTree = "<group>"; };
+		087141182823ACAC0007E117 /* HomeStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		087141192823ACAC0007E117 /* HomeStoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeStoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		0871411C2823C1040007E117 /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		088CBBCF28239874002DAF06 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				088CBBCF28239874002DAF06 /* PostModel.swift */,
+				0871411C2823C1040007E117 /* StoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 				0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */,
 				0840D370282117BC00FD4985 /* HomeContentTableViewCell.xib */,
 				0863BCE1280B24DE00AFB2B9 /* HomeTab.storyboard */,
+				087141182823ACAC0007E117 /* HomeStoryCollectionViewCell.swift */,
+				087141192823ACAC0007E117 /* HomeStoryCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -297,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0840D372282117BC00FD4985 /* HomeContentTableViewCell.xib in Resources */,
+				0871411B2823ACAC0007E117 /* HomeStoryCollectionViewCell.xib in Resources */,
 				0841528A27FF034500ADA61F /* LaunchScreen.storyboard in Resources */,
 				084152A527FF053400ADA61F /* password shown eye icon.png in Resources */,
 				084152A727FF053400ADA61F /* icn_back_24@2x.png in Resources */,
@@ -330,7 +340,9 @@
 				0840D371282117BC00FD4985 /* HomeContentTableViewCell.swift in Sources */,
 				0863BCEE280B2E0000AFB2B9 /* TabBarViewcontroller.swift in Sources */,
 				084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */,
+				0871411A2823ACAC0007E117 /* HomeStoryCollectionViewCell.swift in Sources */,
 				0841528227FF034300ADA61F /* ViewController.swift in Sources */,
+				0871411D2823C1040007E117 /* StoryModel.swift in Sources */,
 				084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */,
 				0840D375282117EB00FD4985 /* HomeViewController.swift in Sources */,
 				0841527E27FF034300ADA61F /* AppDelegate.swift in Sources */,

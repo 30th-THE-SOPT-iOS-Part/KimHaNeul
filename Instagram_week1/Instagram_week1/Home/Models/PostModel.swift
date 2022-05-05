@@ -22,6 +22,5 @@ extension PostModel {
         PostModel(userProfileimageName: "avatar2", userName: "avatar2", postImageName: "postImage2", likedCount: 30, content: "⏰ 큰 목표를 이루고 싶으면 허락을 구하지 마라", commentCount: 330),
         PostModel(userProfileimageName: "avatar3", userName: "avatar3", postImageName: "postImage3", likedCount: 22, content: "🌱 늘 하던 대로 하면 늘 얻던 것을 얻는다. ", commentCount: 25),
         PostModel(userProfileimageName: "avatar4", userName: "avatar4", postImageName: "postImage4", likedCount: 200, content: "🌱 늘 하던 대로 하면 늘 얻던 것을 얻는다. ", commentCount: 32)
-    
     ]
 }

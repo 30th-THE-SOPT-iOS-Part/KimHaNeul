@@ -85,7 +85,7 @@
                             <constraint firstAttribute="height" constant="24" id="mgf-dR-V6x"/>
                         </constraints>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="icn_comment"/>
+                        <buttonConfiguration key="configuration" style="plain" image="icn_bookmark"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋아요 30개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvY-az-NzI">
                         <rect key="frame" x="12" y="428" width="60.5" height="14.5"/>
@@ -151,6 +151,7 @@
     </objects>
     <resources>
         <image name="avatar1" width="48" height="48"/>
+        <image name="icn_bookmark" width="24" height="24"/>
         <image name="icn_comment" width="24" height="24"/>
         <image name="icn_more" width="24" height="24"/>
         <image name="icn_share" width="24" height="24"/>
