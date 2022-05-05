@@ -96,10 +96,10 @@
 		0840D373282117C200FD4985 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				088CBBCE28239645002DAF06 /* Controllers */,
-				088CBBCD2823962D002DAF06 /* ViewModels */,
-				088CBBCC28239614002DAF06 /* Views */,
 				088CBBCB28239603002DAF06 /* Models */,
+				088CBBCC28239614002DAF06 /* Views */,
+				088CBBCD2823962D002DAF06 /* ViewModels */,
+				088CBBCE28239645002DAF06 /* Controllers */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 				0841529127FF043500ADA61F /* imageSource */,
 				0841529827FF048000ADA61F /* iconSource */,
 				0840D373282117C200FD4985 /* Home */,
+				0863BCDE280B229600AFB2B9 /* Join */,
 				0863BCDD280B225400AFB2B9 /* Login */,
 				0863BCEC280B2DB900AFB2B9 /* TabBarVC */,
-				0863BCDE280B229600AFB2B9 /* JoinVC */,
 				0863BCDC280B223E00AFB2B9 /* storyboards */,
 				0841527D27FF034300ADA61F /* AppDelegate.swift */,
 				0841527F27FF034300ADA61F /* SceneDelegate.swift */,
@@ -175,20 +175,20 @@
 		0863BCDD280B225400AFB2B9 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0841528327FF034300ADA61F /* Main.storyboard */,
+				0871411E2823C8A60007E117 /* Views */,
 				0841528127FF034300ADA61F /* ViewController.swift */,
 				084152AD27FF195F00ADA61F /* LoginSuccessViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
 		};
-		0863BCDE280B229600AFB2B9 /* JoinVC */ = {
+		0863BCDE280B229600AFB2B9 /* Join */ = {
 			isa = PBXGroup;
 			children = (
 				084152A927FF192000ADA61F /* JoinSettingNameViewController.swift */,
 				084152AB27FF193300ADA61F /* JoinSettingPasswordViewController.swift */,
 			);
-			path = JoinVC;
+			path = Join;
 			sourceTree = "<group>";
 		};
 		0863BCEB280B277500AFB2B9 /* TabBar */ = {
@@ -211,6 +211,14 @@
 			path = TabBarVC;
 			sourceTree = "<group>";
 		};
+		0871411E2823C8A60007E117 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0841528327FF034300ADA61F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		088CBBCB28239603002DAF06 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,10 +231,8 @@
 		088CBBCC28239614002DAF06 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */,
 				0840D370282117BC00FD4985 /* HomeContentTableViewCell.xib */,
 				0863BCE1280B24DE00AFB2B9 /* HomeTab.storyboard */,
-				087141182823ACAC0007E117 /* HomeStoryCollectionViewCell.swift */,
 				087141192823ACAC0007E117 /* HomeStoryCollectionViewCell.xib */,
 			);
 			path = Views;
@@ -243,6 +249,8 @@
 			isa = PBXGroup;
 			children = (
 				0840D374282117EB00FD4985 /* HomeViewController.swift */,
+				0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */,
+				087141182823ACAC0007E117 /* HomeStoryCollectionViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
