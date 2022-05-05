@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-bq-UH4">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar1" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-bq-UH4">
                         <rect key="frame" x="6" y="10" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="Y5U-HG-V4w"/>
@@ -39,7 +39,7 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="icn_more"/>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postImage1" translatesAutoresizingMaskIntoConstraints="NO" id="eXn-Kh-CkF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="postImage1" translatesAutoresizingMaskIntoConstraints="NO" id="eXn-Kh-CkF">
                         <rect key="frame" x="0.0" y="46" width="375" height="340"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="340" id="M6I-PW-i2G"/>
@@ -106,7 +106,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="댓글 19개 모두 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgD-cu-4ZB">
-                        <rect key="frame" x="12" y="464" width="81" height="12"/>
+                        <rect key="frame" x="12" y="467" width="81" height="12"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
                         <color key="textColor" name="gray_93"/>
                         <nil key="highlightedColor"/>
@@ -127,20 +127,30 @@
                     <constraint firstItem="dvY-az-NzI" firstAttribute="top" secondItem="wI4-0i-m7p" secondAttribute="bottom" constant="10" id="akU-Zo-LUu"/>
                     <constraint firstItem="MgD-cu-4ZB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="bRi-OT-YLf"/>
                     <constraint firstItem="S3v-bq-UH4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="dtA-44-GZb"/>
-                    <constraint firstAttribute="bottom" secondItem="MgD-cu-4ZB" secondAttribute="bottom" constant="12" id="eaD-Xv-Byv"/>
                     <constraint firstAttribute="trailing" secondItem="eXn-Kh-CkF" secondAttribute="trailing" id="iZg-HM-2Fb"/>
                     <constraint firstItem="o9V-3n-3im" firstAttribute="centerY" secondItem="S3v-bq-UH4" secondAttribute="centerY" id="nXa-YH-17j"/>
                     <constraint firstItem="a1I-AR-DRF" firstAttribute="centerY" secondItem="R2m-dy-4Hi" secondAttribute="centerY" id="oBp-C4-4X2"/>
+                    <constraint firstItem="MgD-cu-4ZB" firstAttribute="top" secondItem="R2m-dy-4Hi" secondAttribute="bottom" constant="4" id="pB9-jW-Wbr"/>
                     <constraint firstAttribute="trailing" secondItem="Aka-ue-aJ7" secondAttribute="trailing" constant="10" id="pRg-hK-AFe"/>
                     <constraint firstItem="dvY-az-NzI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="u5b-kL-ZU8"/>
                     <constraint firstItem="S3v-bq-UH4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="wft-ke-1Lk"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="commentLabel" destination="MgD-cu-4ZB" id="FeJ-TF-kpO"/>
+                <outlet property="contentLabel" destination="a1I-AR-DRF" id="gg1-Hg-VfG"/>
+                <outlet property="likedCountLabel" destination="dvY-az-NzI" id="q1P-Tr-H3F"/>
+                <outlet property="postImageView" destination="eXn-Kh-CkF" id="pmp-VG-ddR"/>
+                <outlet property="postUserNameLabel" destination="R2m-dy-4Hi" id="U3i-MN-t95"/>
+                <outlet property="userImageView" destination="S3v-bq-UH4" id="Bi2-Q4-jDp"/>
+                <outlet property="userNameLabel" destination="o9V-3n-3im" id="Cn1-vZ-tSv"/>
+            </connections>
             <point key="canvasLocation" x="163.04347826086959" y="277.90178571428572"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="avatar1" width="48" height="48"/>
         <image name="icn_comment" width="24" height="24"/>
         <image name="icn_more" width="24" height="24"/>
         <image name="icn_share" width="24" height="24"/>
