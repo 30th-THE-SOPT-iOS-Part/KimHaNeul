@@ -1,36 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SxT-Xq-zRE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SxT-Xq-zRE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="mn5-JZ-jRF">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="SxT-Xq-zRE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="SxT-Xq-zRE" customClass="HomeViewController" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gfG-Bh-Zuk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="iqC-78-mAS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="naO-Zj-Au9"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pYz-S7-HJH">
+                                    <size key="itemSize" width="86" height="83"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TxX-PM-a2w">
+                                        <rect key="frame" x="0.0" y="0.0" width="86" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bwu-bM-d3P">
+                                            <rect key="frame" x="0.0" y="0.0" width="86" height="83"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="86" height="83"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4O-is-Ofu">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Instagram Black Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="xgX-zT-n61">
+                                        <rect key="frame" x="14" y="8.5" width="96" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="27" id="2qd-HO-KDf"/>
+                                            <constraint firstAttribute="width" constant="96" id="Yoj-NQ-Vqm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-Dz-Zzn">
+                                        <rect key="frame" x="308" y="10" width="92" height="24"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6V4-ry-0ri">
+                                                <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="WnR-Wn-YY7"/>
+                                                    <constraint firstAttribute="width" constant="24" id="wjO-Pj-PKO"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="icn_unlike"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqO-4g-f37">
+                                                <rect key="frame" x="34" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="SE3-w3-VqM"/>
+                                                    <constraint firstAttribute="height" constant="24" id="aa6-n3-Vum"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="icn_comment"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9l0-re-p21">
+                                                <rect key="frame" x="68" y="0.0" width="24" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="24" id="Hjt-mS-GK4"/>
+                                                    <constraint firstAttribute="height" constant="24" id="bVg-mO-M6k"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="icn_share"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="xgX-zT-n61" firstAttribute="centerY" secondItem="j4O-is-Ofu" secondAttribute="centerY" id="0aH-LS-Yax"/>
+                                    <constraint firstItem="zFV-Dz-Zzn" firstAttribute="centerY" secondItem="j4O-is-Ofu" secondAttribute="centerY" id="32W-82-UFM"/>
+                                    <constraint firstItem="xgX-zT-n61" firstAttribute="leading" secondItem="j4O-is-Ofu" secondAttribute="leading" constant="14" id="a7A-2I-dxd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zFV-Dz-Zzn" secondAttribute="trailing" constant="14" id="b3i-Yo-Bm9"/>
+                                    <constraint firstAttribute="height" constant="44" id="c0z-UM-DOe"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="igP-cI-aAO">
+                                <rect key="frame" x="0.0" y="172" width="414" height="1"/>
+                                <color key="backgroundColor" name="gray_EC"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="KfK-CG-bry"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WMd-0F-m4Q">
+                                <rect key="frame" x="0.0" y="176" width="414" height="637"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lBn-iu-7PE"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="igP-cI-aAO" firstAttribute="leading" secondItem="lBn-iu-7PE" secondAttribute="leading" id="3xN-Ba-MpM"/>
+                            <constraint firstItem="j4O-is-Ofu" firstAttribute="leading" secondItem="lBn-iu-7PE" secondAttribute="leading" id="6nd-Oh-Xh1"/>
+                            <constraint firstItem="igP-cI-aAO" firstAttribute="top" secondItem="iqC-78-mAS" secondAttribute="bottom" id="OkI-lD-7Kj"/>
+                            <constraint firstItem="lBn-iu-7PE" firstAttribute="trailing" secondItem="igP-cI-aAO" secondAttribute="trailing" id="Ryd-6d-yig"/>
+                            <constraint firstItem="lBn-iu-7PE" firstAttribute="trailing" secondItem="WMd-0F-m4Q" secondAttribute="trailing" id="VE1-l6-ZFS"/>
+                            <constraint firstItem="lBn-iu-7PE" firstAttribute="trailing" secondItem="j4O-is-Ofu" secondAttribute="trailing" id="bw6-YV-xPd"/>
+                            <constraint firstItem="WMd-0F-m4Q" firstAttribute="top" secondItem="igP-cI-aAO" secondAttribute="bottom" constant="3" id="cKT-DC-J2q"/>
+                            <constraint firstItem="iqC-78-mAS" firstAttribute="top" secondItem="j4O-is-Ofu" secondAttribute="bottom" id="d9f-l8-zbl"/>
+                            <constraint firstItem="WMd-0F-m4Q" firstAttribute="leading" secondItem="lBn-iu-7PE" secondAttribute="leading" id="dZU-a5-Se4"/>
+                            <constraint firstItem="iqC-78-mAS" firstAttribute="leading" secondItem="lBn-iu-7PE" secondAttribute="leading" id="fK3-eG-edS"/>
+                            <constraint firstItem="lBn-iu-7PE" firstAttribute="bottom" secondItem="WMd-0F-m4Q" secondAttribute="bottom" id="oaq-Ws-Z8D"/>
+                            <constraint firstItem="j4O-is-Ofu" firstAttribute="top" secondItem="lBn-iu-7PE" secondAttribute="top" id="qMx-9x-Kyt"/>
+                            <constraint firstItem="lBn-iu-7PE" firstAttribute="trailing" secondItem="iqC-78-mAS" secondAttribute="trailing" id="rqj-ZU-cp0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="" image="icn_home" selectedImage="icn_home_selected" id="3Fo-Ir-Vbn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNv-H0-tng" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-268" y="-459"/>
+            <point key="canvasLocation" x="-268.1159420289855" y="-459.375"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Instagram Black Logo.png" width="175" height="50"/>
+        <image name="icn_comment" width="24" height="24"/>
         <image name="icn_home" width="24" height="24"/>
         <image name="icn_home_selected" width="24" height="24"/>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="icn_share" width="24" height="24"/>
+        <image name="icn_unlike" width="24" height="24"/>
+        <namedColor name="gray_EC">
+            <color red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0840D371282117BC00FD4985 /* HomeContentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */; };
+		0840D372282117BC00FD4985 /* HomeContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0840D370282117BC00FD4985 /* HomeContentTableViewCell.xib */; };
+		0840D375282117EB00FD4985 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0840D374282117EB00FD4985 /* HomeViewController.swift */; };
 		0841527E27FF034300ADA61F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841527D27FF034300ADA61F /* AppDelegate.swift */; };
 		0841528027FF034300ADA61F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841527F27FF034300ADA61F /* SceneDelegate.swift */; };
 		0841528227FF034300ADA61F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0841528127FF034300ADA61F /* ViewController.swift */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentTableViewCell.swift; sourceTree = "<group>"; };
+		0840D370282117BC00FD4985 /* HomeContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeContentTableViewCell.xib; sourceTree = "<group>"; };
+		0840D374282117EB00FD4985 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0841527A27FF034300ADA61F /* Instagram_week1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram_week1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0841527D27FF034300ADA61F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0841527F27FF034300ADA61F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0840D373282117C200FD4985 /* HomeVC */ = {
+			isa = PBXGroup;
+			children = (
+				0840D36F282117BC00FD4985 /* HomeContentTableViewCell.swift */,
+				0840D370282117BC00FD4985 /* HomeContentTableViewCell.xib */,
+				0840D374282117EB00FD4985 /* HomeViewController.swift */,
+			);
+			path = HomeVC;
+			sourceTree = "<group>";
+		};
 		0841527127FF034300ADA61F = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +114,7 @@
 		0841527C27FF034300ADA61F /* Instagram_week1 */ = {
 			isa = PBXGroup;
 			children = (
+				0840D373282117C200FD4985 /* HomeVC */,
 				0841529127FF043500ADA61F /* imageSource */,
 				0841529827FF048000ADA61F /* iconSource */,
 				0863BCDD280B225400AFB2B9 /* LoginVC */,
@@ -244,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0840D372282117BC00FD4985 /* HomeContentTableViewCell.xib in Resources */,
 				0841528A27FF034500ADA61F /* LaunchScreen.storyboard in Resources */,
 				084152A527FF053400ADA61F /* password shown eye icon.png in Resources */,
 				084152A727FF053400ADA61F /* icn_back_24@2x.png in Resources */,
@@ -274,10 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0840D371282117BC00FD4985 /* HomeContentTableViewCell.swift in Sources */,
 				0863BCEE280B2E0000AFB2B9 /* TabBarViewcontroller.swift in Sources */,
 				084152AA27FF192000ADA61F /* JoinSettingNameViewController.swift in Sources */,
 				0841528227FF034300ADA61F /* ViewController.swift in Sources */,
 				084152AE27FF195F00ADA61F /* LoginSuccessViewController.swift in Sources */,
+				0840D375282117EB00FD4985 /* HomeViewController.swift in Sources */,
 				0841527E27FF034300ADA61F /* AppDelegate.swift in Sources */,
 				0841528027FF034300ADA61F /* SceneDelegate.swift in Sources */,
 				084152AC27FF193300ADA61F /* JoinSettingPasswordViewController.swift in Sources */,
