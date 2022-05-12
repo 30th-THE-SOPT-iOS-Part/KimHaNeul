@@ -39,13 +39,13 @@ class JoinSettingPasswordViewController: UIViewController {
         passwordTF.rightView = secureButton
         passwordTF.rightViewMode = .always
     }
+    
+    
     // 비밀번호 textfield의 secure버튼(눈 아이콘) 클릭됨에 따라 isSecureTextEntry 제어
     @objc func secureEntry(_ sender: UIButton) {
         sender.isSelected.toggle()
         passwordTF.isSecureTextEntry = !sender.isSelected
     }
-    
-    
     
     // 클릭시 loginSuccessVC 띄움
     @IBAction func nextBtnAction(_ sender: Any) {
@@ -56,6 +56,7 @@ class JoinSettingPasswordViewController: UIViewController {
         }
         // 이전 뷰에서 받은 userName 넘겨줌
         loginSuccessVC.userName = userName
+        loginSuccessVC.password = passwordTF.text ?? ""
         loginSuccessVC.modalPresentationStyle = .fullScreen
         self.present(loginSuccessVC, animated: true, completion: nil)
     }

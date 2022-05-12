@@ -11,14 +11,23 @@ class LoginSuccessViewController: UIViewController {
 
     @IBOutlet weak var welcomeLabel: UILabel!
     var userName: String?
+    var password: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    func setUI() {
         settingUserName()
         welcomeLabel.sizeToFit()
-        
     }
+    func settingUserName() {
+        if let userName = userName {
+            welcomeLabel.text = "\(userName)님 Instagram에 오신 것을 환영합니다"
+        }
+    }
+    
     @IBAction func backToLoginAction(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
         let mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarVC")
@@ -29,9 +38,4 @@ class LoginSuccessViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func settingUserName() {
-        if let userName = userName {
-            welcomeLabel.text = "\(userName)님 Instagram에 오신 것을 환영합니다"
-        }
-    }
 }
