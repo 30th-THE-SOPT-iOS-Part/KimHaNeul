@@ -31,17 +31,9 @@ class LoginSuccessViewController: UIViewController {
     }
     
     @IBAction func backToLoginAction(_ sender: UIButton) {
-        print(userName)
-        print(password)
         signUp(name: userName ?? "", email: userName ?? "", password: password ?? "")
-        //dismiss(animated: false)
-        /*
-        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
-        let mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarVC")
-        mainTabBarVC.modalPresentationStyle = .fullScreen
-        self.present(mainTabBarVC, animated: true, completion: nil)
-         */
     }
+    
     func signUp(name: String, email: String, password: String) {
         UserService.shared.signUp(
             name: name,
@@ -62,6 +54,7 @@ class LoginSuccessViewController: UIViewController {
             }
         }
     }
+    
     func signUpSuccessAlert(message: String) {
         let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default) { [self] action in

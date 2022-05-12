@@ -52,12 +52,43 @@ class ViewController: UIViewController {
     
     // 클릭시 loginSuccessVC 띄움
     @IBAction func LoginAction(_ sender: UIButton) {
-        guard let loginSuccessVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginSuccessVC") as? LoginSuccessViewController else {
-            return
+        guard let userID = userIDTF.text, let password = passwordTF.text else { return }
+        login(name: userID, email: userID, password: password)
+    }
+    func login(name: String, email: String, password: String) {
+        UserService.shared.login(
+            name: name,
+            email: email,
+            password: password) { [self] response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? LoginResponse else { return }
+                loginSuccessAlert(message: data.message)
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("pathErr")
+            case .serverErr:
+                print("serverErr")
+            case .networkFail:
+                print("networkFail")
+            }
         }
-        loginSuccessVC.userName = userIDTF.text
-        loginSuccessVC.modalPresentationStyle = .fullScreen
-        self.present(loginSuccessVC, animated: true, completion: nil)
+    }
+    func loginSuccessAlert(message: String) {
+        let alert = UIAlertController(title: message, message: nil, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { [self] action in
+            // 홈으로 이동
+            goHome()
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+    func goHome() {
+        let storyboard = UIStoryboard(name: "MainTabBar", bundle: nil)
+        let mainTabBarVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarVC")
+        mainTabBarVC.modalPresentationStyle = .fullScreen
+        self.present(mainTabBarVC, animated: true, completion: nil)
     }
     
     
