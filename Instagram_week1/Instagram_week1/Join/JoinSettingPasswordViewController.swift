@@ -57,6 +57,7 @@ class JoinSettingPasswordViewController: UIViewController {
         // 이전 뷰에서 받은 userName 넘겨줌
         loginSuccessVC.userName = userName
         loginSuccessVC.password = passwordTF.text ?? ""
+        loginSuccessVC.delegate = self
         loginSuccessVC.modalPresentationStyle = .fullScreen
         self.present(loginSuccessVC, animated: true, completion: nil)
     }
@@ -88,4 +89,9 @@ extension JoinSettingPasswordViewController: UITextFieldDelegate {
         }
     }
   
+}
+extension JoinSettingPasswordViewController: PopVCSignal {
+    func popVC() {
+        self.navigationController?.popToRootViewController(animated: false)
+    }
 }
