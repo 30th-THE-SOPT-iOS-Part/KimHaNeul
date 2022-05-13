@@ -48,13 +48,13 @@ class ViewController: UIViewController {
         passwordTF.isSecureTextEntry = !sender.isSelected
     }
 
-    
-    
     // 클릭시 loginSuccessVC 띄움
     @IBAction func LoginAction(_ sender: UIButton) {
         guard let userID = userIDTF.text, let password = passwordTF.text else { return }
         login(name: userID, email: userID, password: password)
     }
+    
+    // 서버 통신
     func login(name: String, email: String, password: String) {
         UserService.shared.login(
             name: name,

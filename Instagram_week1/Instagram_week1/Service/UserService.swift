@@ -66,8 +66,7 @@ class UserService {
                                     parameters: body,
                                     encoding: JSONEncoding.default,
                                     headers: header)
-        
-        // 서버 통신 시작 - Request 시작
+
         dataRequest.responseData { response in
             switch response.result {
             case .success:
@@ -83,10 +82,8 @@ class UserService {
         }
     }
     
-    // 상태 코드와 값(value, data)를 가지고 통신의 결과를 핸들링하는 함수입니다.
     private func judgeStatus(by statusCode: Int, _ data: Data, purpose: Purpose) -> NetworkResult<Any> {
         switch statusCode {
-        // 성공 시에는 넘겨받은 데이터를 decode(해독)하는 함수를 호출합니다.
         case 200...299: return isVaildData(data: data, purpose: purpose)
         case 400...499: return .pathErr
         case 500...599: return .serverErr
@@ -94,8 +91,6 @@ class UserService {
         }
     }
     
-    // 성공 시 넘겨받은 데이터를 decode하는 함수입니다.
-    // 이 때 우리가 codable을 채택해서 만들어 놓은 구조체 형식의 데이터 모델을 사용합니다.
     private func isVaildData(data: Data, purpose: Purpose) -> NetworkResult<Any> {
         let decoder = JSONDecoder()
         switch purpose {
