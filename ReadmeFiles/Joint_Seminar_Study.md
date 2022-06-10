@@ -297,8 +297,7 @@ let dataRequest =
 ```
 
 POST, GET 의 차이
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6476f7f6-bf80-43a4-9d7c-5e6b47bc8934/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/63438947/173081250-2c9150cf-bcd9-4f15-a534-ec825a7aca96.png)
 
 GET은 **Idempotent : 서버에 동일한 요청을 여러번 전송해도 동일한 응답이 돌아옴**
 
