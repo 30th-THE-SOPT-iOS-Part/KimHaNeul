@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Viewcontroller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="K6L-iF-9jM">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarVC" id="zb3-ty-yEa" customClass="TabBarViewcontroller" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarVC" id="zb3-ty-yEa" customClass="TabBarController" customModule="Instagram_week1" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yJ5-Bo-kTl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
