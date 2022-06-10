@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vki-hu-9Cj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="2SU-2d-qAY">
+            <objects>
+                <viewController storyboardIdentifier="SearchVC" id="vki-hu-9Cj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQf-Ca-S6x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LYg-KX-Q8h"/>
+                        <color key="backgroundColor" red="0.99764198059999998" green="0.99800390009999995" blue="0.32919216159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="" image="icn_search" selectedImage="icn_search_selected" id="lAV-z1-SsW"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VWr-0K-qyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-248"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icn_search" width="24" height="24"/>
+        <image name="icn_search_selected" width="24" height="24"/>
+    </resources>
+</document>
