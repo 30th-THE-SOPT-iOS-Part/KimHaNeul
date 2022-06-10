@@ -3,7 +3,6 @@
 
 ## ✏️ HTTP Method
 
----
 
 ```swift
 public struct HTTPMethod: RawRepresentable, Equatable, Hashable {
@@ -39,9 +38,10 @@ public struct HTTPMethod: RawRepresentable, Equatable, Hashable {
 
 ```swift
 let dataRequest = 
-    AF.request(**url**, // 어디에 있는
-            **method**: .post, // 어떻게
-            **parameters**: body, // 어떤 형식을
+    AF.request(
+            url, // 어디에 있는
+            method: .post, // 어떻게
+            parameters: body, // 어떤 형식을
             encoding: JSONEncoding.default, // 넘겨줄 방법
             headers: header // 받아올 컨텐츠의 타입
 )
@@ -74,11 +74,11 @@ let dataRequest =
 3. `JSON` 어떤 모양을 한 것을 
     
     ```swift
-    *let body: Parameters = [                                            // HTTP body
+    let body: Parameters = [                                            // HTTP body
                 "name": name,
                 "email": email,
                 "password": password
-            ]*
+            ]
     ```
     
 
@@ -88,8 +88,8 @@ let dataRequest =
 dataRequest.responseData { response in
             switch response.result {
             case .success:
-                guard let **statusCode** = response.response?.statusCode else { return }
-                guard let **value** = response.value else { return }
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let value = response.value else { return }
                 
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
@@ -118,9 +118,10 @@ dataRequest.responseData { response in
 
 ```swift
 let dataRequest = 
-    AF.request(**url**, // 어디에 있는
-            **method**: .post, // 어떻게
-            **parameters**: body, // 어떤 형식을
+    AF.request(
+            url, // 어디에 있는
+            method: .post, // 어떻게
+            parameters: body, // 어떤 형식을
             encoding: JSONEncoding.default, // 넘겨줄 방법
             headers: header // 받아올 컨텐츠의 타입
 )
@@ -272,7 +273,7 @@ let dataRequest =
         isLiked: boolean,
     }
     
-    EX)
+    // EX)
     {
         "userId": 1,
         "carId": 2,

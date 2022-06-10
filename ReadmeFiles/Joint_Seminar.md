@@ -1,4 +1,5 @@
-# ✏️ 합동세미나 회고
+# ✏️ 합동세미나 스터디, 회고
+[Alamofire 스터디☂️](https://github.com/30th-THE-SOPT-iOS-Part/KimHaNeul/blob/49387b5656c78c5a5e98f1af28a0271ce809e454/ReadmeFiles/Joint_Seminar_Study.md)
 
 - 개발 능력 향상, 반성
 

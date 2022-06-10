@@ -5,5 +5,5 @@
 | 항목 | 링크 |
 | :---: | :---: |
 | 1차~4차 세미나 이슈 | [HERE👆]() |
-| 합동세미나 이슈, 후기 | [HERE👆]() |
+| 합동세미나 이슈, 후기 | [HERE👆](https://github.com/30th-THE-SOPT-iOS-Part/KimHaNeul/blob/49387b5656c78c5a5e98f1af28a0271ce809e454/ReadmeFiles/Joint_Seminar.md) |
 | 추가로 공부할 사항 | [HERE👆]() |
