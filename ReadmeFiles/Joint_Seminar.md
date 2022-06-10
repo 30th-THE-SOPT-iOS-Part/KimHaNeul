@@ -1,5 +1,5 @@
 # ✏️ 합동세미나 스터디, 회고
-[Alamofire 스터디 ☂️]([ReadmeFiles/Joint_Seminar_Study.md](https://github.com/30th-THE-SOPT-iOS-Part/KimHaNeul/blob/8f182687e15fc1cdeb3a5e91ab663e9ff5045e03/ReadmeFiles/Joint_Seminar_Study.md))  
+[Alamofire 스터디 ☂️](https://github.com/30th-THE-SOPT-iOS-Part/KimHaNeul/blob/8f182687e15fc1cdeb3a5e91ab663e9ff5045e03/ReadmeFiles/Joint_Seminar_Study.md)  
 [주요 이슈 ⚠️](https://github.com/SOPT-30th-Joint-Seminar-15/Client-iOS/pull/22)
 
 - 개발 능력 향상, 반성
