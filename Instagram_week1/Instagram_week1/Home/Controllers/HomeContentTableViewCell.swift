@@ -19,18 +19,34 @@ class HomeContentTableViewCell: UITableViewCell {
     @IBOutlet weak var likedCountLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     
+    // MARK: - @IBAction Properties
+    @IBAction func likeButtonDidTapped(_ sender: UIButton) {
+        if sender.isSelected {
+            sender.isSelected = false
+        }
+        else {
+            sender.isSelected = true
+        }
+    }
     
+    // MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
-        postImageView.contentMode = .scaleAspectFill
         
+        setUI()
+    }
+    
+    func setUI() {
+        postImageView.contentMode = .scaleAspectFill
+        likeButton.setImage(UIImage(named: "icn_unlike"), for: .normal)
+        likeButton.setImage(UIImage(named: "icn_like"), for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
     
     func setData(post : PostModel) {
         userImageView.image = UIImage(named: post.userProfileimageName)
@@ -41,6 +57,7 @@ class HomeContentTableViewCell: UITableViewCell {
         contentLabel.text = post.content
         commentLabel.text =  "댓글 \(post.commentCount)개 모두 보기"
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
 

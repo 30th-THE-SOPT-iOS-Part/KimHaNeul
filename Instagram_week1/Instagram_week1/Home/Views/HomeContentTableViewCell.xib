@@ -57,6 +57,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="icn_unlike"/>
+                                <connections>
+                                    <action selector="likeButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gE6-14-Wsh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wHI-5a-U8t">
                                 <rect key="frame" x="34" y="0.0" width="24" height="24"/>
@@ -140,6 +143,7 @@
             <connections>
                 <outlet property="commentLabel" destination="MgD-cu-4ZB" id="FeJ-TF-kpO"/>
                 <outlet property="contentLabel" destination="a1I-AR-DRF" id="gg1-Hg-VfG"/>
+                <outlet property="likeButton" destination="fuc-1I-sMz" id="b0n-jM-ezv"/>
                 <outlet property="likedCountLabel" destination="dvY-az-NzI" id="q1P-Tr-H3F"/>
                 <outlet property="postImageView" destination="eXn-Kh-CkF" id="pmp-VG-ddR"/>
                 <outlet property="postUserNameLabel" destination="R2m-dy-4Hi" id="U3i-MN-t95"/>
