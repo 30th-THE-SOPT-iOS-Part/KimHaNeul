@@ -15,14 +15,20 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUI()
+    }
+    func setUI() {
+
         let tableViewLib = UINib(nibName: HomeContentTableViewCell.identifier, bundle: nil)
         tableView.register(tableViewLib, forCellReuseIdentifier: "HomeContentTableViewCell")
+        
         let collectionViewLib = UINib(nibName: HomeStoryCollectionViewCell.identifier, bundle: nil)
         collectionView.register(collectionViewLib, forCellWithReuseIdentifier: "HomeStoryCollectionViewCell")
         
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        tableView.rowHeight = UITableView.automaticDimension
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -35,8 +41,6 @@ class HomeViewController: UIViewController {
         layout.estimatedItemSize = CGSize(width: 58.0, height: 72)
         
         collectionView.setCollectionViewLayout(layout, animated: true)
-        
-        
     }
 }
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
