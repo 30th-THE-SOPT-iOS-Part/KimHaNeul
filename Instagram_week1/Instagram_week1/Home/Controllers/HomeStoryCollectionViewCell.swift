@@ -14,11 +14,10 @@ class HomeStoryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imaegView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-       
     }
+    
     func setData(story : StoryModel) {
         imaegView.image = UIImage(named: story.userProfileimageName)
         userNameLabel.text = story.userName
